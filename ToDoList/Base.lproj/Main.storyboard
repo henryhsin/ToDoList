@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <scenes>
+        <!--LIST-->
+        <scene sceneID="hNz-n2-bh7">
+            <objects>
+                <viewController id="9pv-A4-QxB" customClass="FirstViewController" customModule="ToDoList" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ia1-K6-d13"/>
+                        <viewControllerLayoutGuide type="bottom" id="4ug-Mw-9AY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="tsR-hK-woN">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="My To-Do List" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f9e-bi-nWF">
+                                <rect key="frame" x="153" y="28" width="295" height="51"/>
+                                <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="45"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Add new task now!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4kV-sV-lL1">
+                                <rect key="frame" x="195" y="94" width="210" height="28"/>
+                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="25"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="50" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="AFe-c3-yi7">
+                                <rect key="frame" x="-5" y="124" width="605" height="427"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="50" id="agP-kX-lE0">
+                                        <rect key="frame" x="0.0" y="28" width="605" height="50"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="agP-kX-lE0" id="Pzb-UY-HNQ">
+                                            <rect key="frame" x="0.0" y="0.0" width="605" height="49.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="9pv-A4-QxB" id="k4f-39-JiE"/>
+                                    <outlet property="delegate" destination="9pv-A4-QxB" id="oaz-b3-VJn"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="AFe-c3-yi7" firstAttribute="top" secondItem="f9e-bi-nWF" secondAttribute="bottom" constant="14" id="72o-rr-XEw"/>
+                            <constraint firstItem="f9e-bi-nWF" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" constant="38" id="NaC-qW-qtG"/>
+                            <constraint firstAttribute="trailing" secondItem="AFe-c3-yi7" secondAttribute="trailing" id="bkC-ig-uhZ"/>
+                            <constraint firstItem="4kV-sV-lL1" firstAttribute="top" secondItem="f9e-bi-nWF" secondAttribute="bottom" constant="5" id="lud-a4-kBr"/>
+                            <constraint firstItem="4kV-sV-lL1" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="pzO-Wo-BWo"/>
+                            <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="AFe-c3-yi7" secondAttribute="bottom" id="tuE-ff-wP1"/>
+                            <constraint firstItem="f9e-bi-nWF" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="xT9-8w-o46"/>
+                            <constraint firstItem="AFe-c3-yi7" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" id="yXk-aq-xHf"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="LIST" image="File" id="acW-dT-cKf"/>
+                    <connections>
+                        <outlet property="addTaskReminder" destination="4kV-sV-lL1" id="qb3-m0-jlG"/>
+                        <outlet property="myTableView" destination="AFe-c3-yi7" id="xwr-Lb-95d"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="750" y="-320"/>
+        </scene>
+        <!--ADD-->
+        <scene sceneID="wg7-f3-ORb">
+            <objects>
+                <viewController id="8rJ-Kc-sve" customClass="SecondViewController" customModule="ToDoList" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="L7p-HK-0SC"/>
+                        <viewControllerLayoutGuide type="bottom" id="Djb-ko-YwX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Input new task to the list!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FwX-Br-PGe">
+                                <rect key="frame" x="146" y="101" width="309" height="28"/>
+                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="27"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Add New Task" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XPp-tx-kQw">
+                                <rect key="frame" x="143" y="34" width="315" height="51"/>
+                                <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="45"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="gXH-3D-WqN">
+                                <rect key="frame" x="146" y="154" width="232" height="30"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="P2o-zn-Rey"/>
+                                    <constraint firstAttribute="width" constant="232" id="lD3-a4-3go"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="changeText:" destination="8rJ-Kc-sve" eventType="editingChanged" id="MvL-uU-aoO"/>
+                                    <outlet property="delegate" destination="8rJ-Kc-sve" id="rWb-8G-qIs"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oP5-lc-WI9">
+                                <rect key="frame" x="392" y="154" width="56" height="30"/>
+                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="23"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="addTasks:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="uWg-CW-xxC"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="XPp-tx-kQw" firstAttribute="top" secondItem="L7p-HK-0SC" secondAttribute="bottom" constant="38" id="4Ts-aC-U0A"/>
+                            <constraint firstItem="gXH-3D-WqN" firstAttribute="leading" secondItem="FwX-Br-PGe" secondAttribute="leading" id="cA0-Jf-3jF"/>
+                            <constraint firstItem="oP5-lc-WI9" firstAttribute="leading" secondItem="gXH-3D-WqN" secondAttribute="trailing" constant="21" id="dMB-ol-DMy"/>
+                            <constraint firstItem="FwX-Br-PGe" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="dYQ-rw-62Q"/>
+                            <constraint firstItem="XPp-tx-kQw" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="gF8-KB-jKN"/>
+                            <constraint firstItem="gXH-3D-WqN" firstAttribute="top" secondItem="FwX-Br-PGe" secondAttribute="bottom" constant="10" id="gHx-Ml-DBf"/>
+                            <constraint firstItem="oP5-lc-WI9" firstAttribute="centerY" secondItem="gXH-3D-WqN" secondAttribute="centerY" id="rpe-fY-L20"/>
+                            <constraint firstItem="FwX-Br-PGe" firstAttribute="top" secondItem="XPp-tx-kQw" secondAttribute="bottom" constant="4" id="sP5-fx-nxT"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="ADD" image="Add" id="cPa-gy-q4n"/>
+                    <connections>
+                        <outlet property="addButton" destination="oP5-lc-WI9" id="bxm-eg-871"/>
+                        <outlet property="myTextField" destination="gXH-3D-WqN" id="UXk-zd-VZS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="750" y="360"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="yl2-sM-qoP">
+            <objects>
+                <tabBarController id="49e-Tb-3d3" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
+                        <rect key="frame" x="0.0" y="975" width="768" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
+                        <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="0.0" y="0.0"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Add" width="23" height="23"/>
+        <image name="File" width="21" height="20"/>
+    </resources>
+</document>
